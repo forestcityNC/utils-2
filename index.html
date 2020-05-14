@@ -82,7 +82,7 @@ html, body, #map {
     //   alert(e.message);
     // }
 
-
+    map.locate({setView: true, maxZoom: 16});
 
     var ortho2019 = L.tileLayer.wms('https://services.nconemap.gov/secure/services/Imagery/Orthoimagery_2019/ImageServer/WMSServer?', {
       maxZoom: 22,
@@ -348,7 +348,7 @@ html, body, #map {
     }).addTo(map);
 
     var submitToProxy = function(q){
-      $.post("callProxy.php", {
+      $.post("./php/callProxy.php", {
         qurl:q,
         cache: false,
         timeStamp: new Date().getTime()
