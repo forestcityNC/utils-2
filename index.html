@@ -348,7 +348,7 @@ html, body, #map {
     }).addTo(map);
 
     var submitToProxy = function(q){
-      $.post("php/callProxy.php", {
+      $.post("php/callproxy.php", {
         qurl:q,
         cache: false,
         timeStamp: new Date().getTime()
